@@ -1,0 +1,53 @@
+@use 'variables';
+
+.trailer {
+    text-align: right;
+    padding-block: 5rem;
+
+    .grid {
+        &__item1 {
+            .title {
+                margin-bottom: 2rem;
+            }
+
+            .arrow__list {
+                &__item {
+                    display: inline;
+
+                    p {
+                        display: inline-block;
+                        font-size: 2rem;
+                        margin-top: 1rem;
+                    }
+
+                    &:nth-child(1) {
+                        opacity: .05;
+                    }
+
+                    &:nth-child(2) {
+                        opacity: .25;
+                    }
+
+                    &:nth-child(3) {
+                        opacity: .5;
+                    }
+
+                    &:nth-child(4) {
+                        opacity: .75;
+                    }
+
+                    &:nth-child(5) {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &__item2 {
+            iframe {
+                filter: drop-shadow(rgba(0, 0, 0, .25) 0 0 1.5rem);
+            }
+        }
+    }
+
+}

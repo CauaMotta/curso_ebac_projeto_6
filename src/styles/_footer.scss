@@ -1,0 +1,85 @@
+@use 'variables';
+
+.footer {
+    background-color: variables.$redDeadpool;
+
+    filter: drop-shadow(rgba(0, 0, 0, .25) 0 0 .5rem);
+
+    .container {
+        padding: 5rem;
+
+        .title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .links {
+            &__list {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                list-style: none;
+                margin-bottom: 2rem;
+
+                &__item {
+                    a {
+                        text-decoration: none;
+                        color: variables.$fontColor;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            .grid1,
+            .grid2,
+            .grid3 {
+                .title {
+                    font-family: variables.$fontFamily;
+                    font-weight: 700;
+                    font-size: 1.25rem;
+                    text-align: left;
+                    margin-bottom: .25rem;
+
+                    i {
+                        color: variables.$fontSubColor;
+                    }
+                }
+
+                &__list {
+                    list-style: none;
+
+                    &__item {
+                        a {
+                            color: variables.$fontSubColor;
+                            padding-left: .5rem;
+                        }
+                    }
+                }
+            }
+
+            .grid3 {
+                &__list {
+                    display: flex;
+                    gap: 1rem;
+
+                    &__item {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: .75rem;
+        }
+    }
+}

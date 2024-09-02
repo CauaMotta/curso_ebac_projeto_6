@@ -1,0 +1,46 @@
+@use 'variables';
+
+.buyTicket {
+    padding-block: 10rem;
+
+    .title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .brand__title {
+        font-size: 3rem;
+    }
+
+    .buyButton {
+        padding-block: 2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .social {
+        .text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        &__list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 1rem;
+
+            &__item {
+                cursor: pointer;
+                font-size: 1.5rem;
+
+                a {
+                    color: variables.$fontSubColor;
+                }
+            }
+        }
+    }
+}

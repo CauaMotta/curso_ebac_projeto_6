@@ -1,0 +1,59 @@
+@use 'variables';
+
+.navbar {
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 75px;
+
+    transition: .3s ease;
+
+    &__container {
+
+        &__menu {
+
+            &__list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                list-style: none;
+
+                &__item {
+
+                    a {
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-family: variables.$fontFamily;
+                        color: variables.$fontColor;
+                        font-size: 1rem;
+                        font-weight: 600;
+
+
+                        img {
+                            max-width: 48px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-transparent {
+    background: linear-gradient(180deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.navbar-full {
+    background-color: variables.$backgroundColor;
+    border-bottom: 3px solid variables.$redDeadpool;
+    filter: drop-shadow(rgba($color: variables.$redDeadpool, $alpha: .15) 0 2px 1rem);
+}
+
+.active {
+    font-size: 1.1rem !important;
+    font-weight: 800 !important;
+}

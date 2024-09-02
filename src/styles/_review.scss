@@ -1,0 +1,61 @@
+@use 'variables';
+
+.review {
+    padding-block: 5rem;
+
+    .title {
+        text-align: center;
+    }
+
+    .generalScore {
+        margin-block: 2rem;
+
+        .text {
+            font-weight: 600;
+            font-size: 1.25rem;
+
+            i {
+                color: variables.$yellowWolverine;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__list {
+
+        .card__review {
+            padding: .85rem;
+            border-radius: 1rem;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+            }
+
+            &__title {
+                color: variables.$fontColor;
+                font-weight: 600;
+                font-size: 1.25rem;
+            }
+
+            &__subtitle {
+                color: variables.$yellowWolverine;
+                font-size: .85rem;
+
+                &__author {
+                    display: inline;
+                    margin-left: .5rem;
+                    color: variables.$fontSubColor;
+                }
+            }
+
+            &__text {
+                color: variables.$fontSubColor;
+            }
+
+            &:hover {
+                background-color: variables.$backgroundHover;
+            }
+        }
+    }
+}

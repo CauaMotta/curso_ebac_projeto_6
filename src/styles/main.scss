@@ -1,0 +1,66 @@
+@use 'variables';
+@use 'header';
+@use 'hero-section';
+@use 'synopsis';
+@use 'trailer';
+@use 'actors';
+@use 'review';
+@use 'buyTicket';
+@use 'footer';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: variables.$fontFamily !important;
+    background-color: variables.$backgroundColor !important;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.title {
+    color: variables.$fontColor;
+    font-family: variables.$fontBrand;
+    font-size: 1.5rem;
+}
+
+.text {
+    color: variables.$fontSubColor;
+    font-family: variables.$fontFamily;
+    font-size: 1rem;
+}
+
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: variables.$fontColor;
+    font-weight: 600;
+
+    background-color: variables.$redDeadpool;
+
+    padding: 1rem;
+}
+
+.viewAll {
+    display: block;
+    text-align: right;
+    color: variables.$fontSubColor;
+    font-size: .85rem;
+}
+
+:target {
+    scroll-margin-top: 50px;
+}
